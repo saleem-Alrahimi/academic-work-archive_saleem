@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة البيانات الأساسية</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="java.js" defer></script>
+</head>
+
+<body dir="rtl">
+    <fieldset>
+        <legend>البيانات الأساسية</legend>
+        <form action="">
+            <br>الاسم الأول: &nbsp;
+            <input type="text" name="name"> 
+            اسم الأب: &nbsp;
+            <input type="text" name="namescan"><br>
+            اسم الجد: &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="nametwescan">
+            اسم العائلة: &nbsp;
+            <input type="text" name="lastname"><br><br><br>
+            نوع الهوية: &nbsp;
+            <input type="radio" name="cart" value="بطاقات أحوال">بطاقات أحوال
+            <input type="radio" name="cart" value="إقامة">إقامة
+            <br><br><br>
+            رقم الهوية /رقم الإقامة
+            <input type="number" name="namecard">
+            الجنس: &nbsp;
+            <input type="radio" name="sex" value="ذكر" checked>ذكر
+            <input type="radio" name="sex" value="أنثى">أنثى
+            <br><br>
+            تاريخ الإصدار:
+            <input type="date" name="date">
+            <br><br><br>
+            الرمز البريدي
+            <input type="text" name="hhhh">
+            الجنسية
+            <select name="nationality">
+                <option value="سعودي">سعودي</option>
+                <option value="يمني">يمني</option>
+                <option value="أجنبي">أجنبي</option>
+            </select>
+            <br>
+            المدينة
+            <select name="city">
+                <optgroup label="المدينة">
+                    <option value="إب">إب😍</option>
+                    <option value="عدن">عدن</option>
+                    <option value="مارب">مارب</option>
+                    <option value="تعز">تعز</option>
+                    <option value="صنعاء">صنعاء</option>
+                    <option value="اخرى">أخرى</option>
+                </optgroup>
+            </select>
+        </form>
+    </fieldset>
+    
+    <br>
+    <a href="2.html" target="_blank" id="next">التالي</a>
+    
+    <!-- أيقونة التعريف -->
+    <a href="about.html" target="_blank" class="icon" title="تعرف على المصمم">i</a>
+</body>
+</html>

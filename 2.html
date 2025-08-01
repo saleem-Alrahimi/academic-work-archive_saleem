@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+    <script>
+        // وظيفة لجمع المعلومات وعرضها في وحدة التحكم
+        function submitForm() {
+            // الحصول على القيم من الحقول
+            const phone = document.querySelector('input[name="tal"]').value || 'غير متوفر';
+            const fax = document.querySelector('input[name="fax"]').value || 'غير متوفر';
+            const email = document.querySelector('input[name="e-mail"]').value || 'غير متوفر';
+
+            // عرض القيم في وحدة التحكم
+            console.log(`الهاتف: ${phone}`);
+            console.log(`الفاكس: ${fax}`);
+            console.log(`البريد الإلكتروني: ${email}`);
+        }
+
+        // إضافة حدث الضغط على الرابط للانتقال إلى الصفحة التالية
+        document.addEventListener('DOMContentLoaded', () => {
+            const nextButton = document.getElementById('n'); // الزر للانتقال إلى الصفحة التالية
+            if (nextButton) {
+                nextButton.onclick = function(event) {
+                    event.preventDefault(); // منع الانتقال الفوري
+                    submitForm(); // استدعاء الوظيفة لجمع البيانات وعرضها
+                    // الانتقال بعد فترة قصيرة
+                    setTimeout(() => {
+                        window.location.href = nextButton.href; // الانتقال إلى الصفحة التالية
+                    }, 3000); // الانتقال بعد 1 ثانية
+                };
+            }
+        });
+    </script>
+</head> 
+<body dir="rtl"><br><br>
+
+    <a href="1.html" id="back">العودة الى القائمة الرئيسية </a>
+
+    <fieldset>
+        <legend>بيانات التوصيل </legend>
+        <form action="">
+            الهاتف:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="number" name="tal">
+            <br>
+            فاكس:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="fax">
+            <br>
+            البريد الالكتروني:
+            <input type="email" name="e-mail"><br>
+            <br><br><br>
+            
+            <a href="3.html" target="_blank" id="n">لإنتقال الى الصفحة التالية</a>
+        </form>
+    </fieldset>
+</body>
+</html>

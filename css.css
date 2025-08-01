@@ -1,0 +1,198 @@
+body {
+    background-image: url('1725804602861.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-weight: bold;
+    font-size: large;
+    height: 150vh;
+    color: #d61717;
+}
+
+fieldset {
+    background-image: url('1725804739772.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(204, 57, 57, 0.3);
+}
+
+legend {
+    font-size: 26px;
+    font-weight: bold;
+    background-color: rgba(216, 125, 152, 0.8);
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+}
+
+input[type="text"], input[type="number"], input[type="email"], input[type="date"], select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background: rgba(255, 249, 249, 0.082);
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="date"]:focus, select:focus {
+    border-color: #0c0b0b;
+    border: 3px solid #000000;
+    background: rgba(255, 255, 255, 0.5);
+    outline: none;
+}
+
+/* Saleem Anan Al_rahimi */
+.butt, .click {
+    border: 1px solid #700;
+    padding: 10px;
+    color: #160b0b;
+    background: rgb(230, 226, 226);
+    border-radius: 5px;
+    transition: all 1s;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.butt:hover {
+    background: #6e9daf;
+    padding: 15px;
+    font-size: 15px;
+    transition: all 0.1s;
+    color: #080808;
+}
+
+.click:hover {
+    background: #853f3f;
+    padding: 20px;
+    color: #030202;
+}
+
+#n {
+    padding: 15px;
+    border: solid rebeccapurple;
+    color: #020202;
+    border-radius: 2px;
+    font-size: 15px;
+    transition: all 0.5s;
+    background: rgb(177, 184, 143);
+    text-decoration: none;
+    display: inline-block;
+}
+
+#n:hover {
+    background: rgb(253, 84, 84);
+    padding: 15px;
+}
+
+
+.button, .click {
+    border: 1px solid #700;
+    padding: 10px;
+    color: #160b0b;
+    background: rgb(230, 226, 226);
+    border-radius: 5px;
+    transition: all 1s;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #758f19;
+    padding: 15px;
+    font-size: 15px;
+    transition: all 0.1s;
+    color: #080808;
+}
+
+#back {
+    padding: 10px;
+    color: #f7faf6;
+    background: rgb(46, 25, 25);
+    border-radius: 5px;
+    transition: all 1s;
+    font-size: 20px;
+    cursor: pointer;
+} 
+
+#back:hover {
+    border: 1px solid rgb(13, 19, 79);
+    padding: 15px;
+    color: #160b0b;
+    background: rgb(255, 255, 255);
+    border-radius: 7px;
+    transition: all 0.5s;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#next {
+    border: 1px solid rgb(21, 230, 101);
+    padding: 10px;
+    color: #f7faf6;
+    background: rgb(46, 25, 25);
+    border-radius: 5px;
+    transition: all 1s;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#next:hover {
+    border: 1px solid rgb(13, 19, 79);
+    padding: 20px;
+    color: #160b0b;
+    background: rgb(255, 255, 255);
+    border-radius: 30px;
+    transition: all 0.5s;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+img {
+    padding:  1px;
+    width: 250px;
+    height: 250px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+}
+
+.icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #529b54;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    top: 20px; 
+    left: 20px; 
+}
+
+.icon:hover {
+    background-color: #e92323;
+}
+.ab{
+    font-size: 30px;
+    color: #000000;
+    text-align: center;
+    
+}
+.not{
+    width: calc(10% - 20px);
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background: rgba(235, 3, 3, 0.082);
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
