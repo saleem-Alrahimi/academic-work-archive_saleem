@@ -1,0 +1,201 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Node
+{
+public:
+    string word;
+    Node *next;
+    Node()
+    {
+        next = NULL;
+    }
+};
+
+class SLL
+{
+
+public:
+    Node *head;
+    SLL()
+    {
+        head = NULL;
+    }
+    bool isempty()
+    {
+        return (head == NULL);
+    }
+    
+
+    void addWord(const string &word)
+    {
+        Node *newnode = new Node();
+        newnode->word = word;
+        if (isempty())
+        {
+            head = newnode;
+        }
+        else
+        {
+            Node *temp = head;
+            while (temp->next != NULL)
+            {
+                temp = temp->next;
+            }
+            temp->next = newnode;
+        }
+    }
+
+    void deleteWord(const string &word)
+    {
+    	if(isempty())
+    	cout<<"the list is empty no word to delete \n";
+    	else
+		{
+			bool done=false;
+	        Node *current = head;
+	        Node *previous = NULL;
+	        while (current != NULL && current->word != word)
+	        {
+	            previous = current;
+	            current = current->next;
+	        }
+	        if (current == NULL)
+	        {
+	        	cout<<"the word is not found .\n";
+	        	return;
+	        }
+	            
+	        else if (previous == NULL)
+	        {
+	            head = current->next; 
+	            cout<<" successful .\n";
+	        }
+	        else
+	        {
+	            previous->next = current->next; 
+	            cout<<" successful .\n";
+	        }
+	        delete current;
+        
+	    	
+	    }
+    	
+    }
+
+    void printWords()
+    {
+    	if(isempty())
+    	cout<<"the list is empty . \n";
+    	else
+		{
+	        Node *temp = head;
+	        while (temp != NULL)
+	        {
+	            cout << temp->word << " ";
+	            temp = temp->next;
+	        }
+	        cout << endl;
+		}
+    }
+
+    void wordcounter(const string &word) const
+    {
+        Node *temp = head;
+        int count = 0;
+        while (temp != NULL)
+        {
+            if (temp->word == word)
+            {
+                count++;
+            }
+            temp = temp->next;
+        }
+        cout << "the word '" << word << "' has been repeated " << count << "times .\n";
+    }
+
+    void updateWord(const string &oldWord, const string &newWord)
+    {
+        Node *current = head;
+        bool isfound = false;
+        while (current != NULL)
+        {
+            if (current->word == oldWord)
+            {
+                current->word = newWord;
+                isfound = true;
+            }
+            current = current->next;
+        }
+        if (isfound)
+        {
+            cout << "the update is done .\n";
+        }
+        else
+        {
+            cout << "the word is not found .\n";
+        }
+    }
+
+    ~SLL()
+    {
+        Node *current = head;
+        while (current != NULL)
+        {
+            Node *next = current->next;
+            delete current;
+            current = next;
+        }
+    }
+};
+
+int main()
+{
+    SLL diary;
+    int choice;
+    string word, newWord;
+
+    do
+    {
+        cout << "1. Add Word\n2. Delete Word\n3. Print The Word\n4. Update Word\n5. Looking For Repeat Of a Word\n6. Exit\nEnter The Option Number: ";
+        cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+            cout << "Enter The Word : ";
+            cin >> word;
+            diary.addWord(word);
+            break;
+        case 2:
+            cout << "Enter The Word to delete : ";
+            cin >> word;
+            diary.deleteWord(word);
+            break;
+        case 3:
+            diary.printWords();
+            break;
+        case 4:
+            cout << "Enter The Old Word: ";
+            cin >> word;
+            cout << "Enter The New Word: ";
+            cin >> newWord;
+            diary.updateWord(word, newWord);
+            break;
+        case 5:
+            cout << "Enter Word To Check : ";
+            cin >> word;
+            diary.wordcounter(word);
+            break;
+        case 6:
+            cout << "Exit.\n";
+            break;
+        default:
+            cout << "rong option try again .\n";
+            break;
+        }
+    } while (choice != 6);
+
+    return 0;
+}
